@@ -3,8 +3,8 @@
 This site includes the slides and labs for the Docker Kubernetes Kickstart class. 
 
 ## Course Content 
-Day 1: (http://bit.ly/kickstart-content-1)   
-Day 2: (http://bit.ly/kickstart-content-2)   
+[Day 1:] (http://bit.ly/kickstart-content-1)   
+[Day 2:] (http://bit.ly/kickstart-content-2)   
 
 ## Labs
 [lab VMs](https://docs.google.com/spreadsheets/d/1kW1rNQMZVdoYa2IDLZa66rLv122LM_mIfkbjxhEmVsQ/edit?usp=sharing)  
