@@ -117,7 +117,7 @@ The output should look like the following:
     The container is automatically assigned eth0 and assigned an IP Address. This is the default behavior of docker. By default, docker will assign containers to the default bridge network.
 
 5.	Run following command and statically assign a dns server to the containers /etc/resolv.conf  
-`docker run --rm --dns 8.8.8.8 alpine:latest nslookup google.com`  
+`docker run --rm --dns 8.8.8.8 aslaen/nslookup nslookup google.com`  
 The output should look like the following:
     ```
     Server:    8.8.8.8
@@ -131,7 +131,7 @@ The output should look like the following:
 ### 3. DNS Search and Host Record
 Step by Step Guide
 1.	Run following command and assign a DNS search suffix to the container.  
-`docker run --rm --dns 8.8.8.8 --dns-search docker.com alpine:latest nslookup docs`  
+`docker run --rm --dns 8.8.8.8 --dns-search docker.com aslaen/nslookup nslookup docs`  
 The output should look like the following:
     ```
     Server:    8.8.8.8
@@ -149,22 +149,12 @@ The output should look like the following:
     ```
     Adding a dns-server suffix to container allows the container to append the search suffix to the containers DNS name resolution. In the above example, searching for docs, resulting in entire DNS lookup being docs.docker.com (similar to most Linux systems).
 
-2.	Run following command and add a host entry to the container /etc/hosts file.  
-`docker run --rm --add-host devdb:127.0.0.1 alpine:latest nslookup devdb`  
-The output should look like the following:
-    ```
-    PING devdb (127.0.0.1): 56 data bytes
-    64 bytes from 127.0.0.1: seq=0 ttl=64 time=0.050 ms
 
-    --- devdb ping statistics ---
-    1 packets transmitted, 1 packets received, 0% packet loss
-    round-trip min/avg/max = 0.050/0.050/0.050 ms
-    ```
-    Adding an entry to the /etc/hosts file allows the container to resolve the names of hostnames to IP Addresses (similar to most Linux systems).
-
-3.	In the command line, enter  
-    `docker run --rm --hostname containerA --add-host docker.com:127.0.0.1 
-  --add-host test:10.10.10.1 alpine:latest cat /etc/hosts`  
+3.	On the command line, enter  
+```
+    docker run --rm --hostname containerA --add-host docker.com:127.0.0.1 
+  --add-host test:10.10.10.1 alpine:latest cat /etc/hosts  
+```
 The output should look like the following:
     ```
     127.0.0.1	localhost
