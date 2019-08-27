@@ -8,9 +8,9 @@ chmod 600 /path/to/lab.pem
 ```
 
 ### SSH to lab servers 
-The username for SSH is `root`
+The username for SSH is `ubuntu`
 ```
-ssh -i /path/to/lab.pem root@<LAB IP> 
+ssh -i /path/to/lab.pem ubuntu@<LAB IP> 
 ```
 
 

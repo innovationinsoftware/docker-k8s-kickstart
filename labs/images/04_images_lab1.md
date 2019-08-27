@@ -22,7 +22,7 @@ Step by Step Guide
 
 5.	This tab shows a list of all the images that have been tagged in this repository.
 
-6.	Using the Search function, locate the list of nginx repositories. Select the webdevops/nginx repo to see more details.
+6.	Search for nginx and select one of the repositories to see more details.
 
 7.	Select the Dockerfile tab to view the Dockerfile for this build.
 
@@ -48,7 +48,7 @@ The .pem file will be provided by the instructor for this lab. This command will
 The last line of output will be a container ID.  
 
 4.	Run the following command to validate that WordPress CLI is not installed.  
-    `docker exec wpaio wp theme list --allow-root --path=’/var/www/html’`  
+    `docker exec wpaio wp theme list --allow-root --path='/var/www/html'`  
 The output will contain an error message. This is because the WordPress CLI is not yet installed.  
     ```
     OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"wp\": executable file not found in $PATH": unknown
