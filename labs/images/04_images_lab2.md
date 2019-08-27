@@ -30,13 +30,15 @@ The .pem file will be provided by the instructor for this lab. This command will
 You can switch to Insert Text mode with the 'i' command. Edit the file contents to look like the snippet below.  
 *Note:  if you construct the file with cut&paste (not recommended), work on one line at a time to avoid artifacts.* 
 
-    `FROM s5atrain/wordpress:aio`  
-    `LABEL activity="wp-cli-install"`  
+```
+    FROM s5atrain/wordpress:aio  
+    LABEL activity="wp-cli-install"  
     
-    `RUN apt-get update &&\`  
-    `    apt-get install wget`  
-    `RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar`  
-    `RUN mv wp-cli.phar /usr/local/bin/wp && chmod +x /usr/local/bin/wp`  
+    RUN apt-get update &&\  
+        apt-get install wget  
+    RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar  
+    RUN mv wp-cli.phar /usr/local/bin/wp && chmod +x /usr/local/bin/wp  
+```
 
 5.	To exit and save the Dockerfile, hit the esc button and enter  
     `:wq`
