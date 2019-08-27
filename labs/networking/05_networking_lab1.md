@@ -152,8 +152,7 @@ The output should look like the following:
 
 3.	On the command line, enter  
 ```
-    docker run --rm --hostname containerA --add-host docker.com:127.0.0.1 
-  --add-host test:10.10.10.1 alpine:latest cat /etc/hosts  
+    docker run --rm --hostname containerA --add-host docker.com:127.0.0.1 --add-host test:10.10.10.1 alpine:latest cat /etc/hosts  
 ```
 The output should look like the following:
     ```
