@@ -170,4 +170,4 @@ two-containers                  1/2     Running   0          16m
 kubectl exec -it <mysql-pod-name> -- mysql -ppassword
 ```
 
-Great job! Lab complete 
+## Lab complete
