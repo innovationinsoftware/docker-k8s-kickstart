@@ -46,7 +46,7 @@ kubectl get pod nginx-pod-lab-<name> -o json
 
 8. Now get info about it in `YAML` syntax
 ```
-kubectl get pod nginx-pod-lab-<name> -o yaml
+kubectl get pod nginx-pod-lab-<name> -o yml
 ```
 
 9. Delete everything! 
@@ -57,7 +57,7 @@ kubectl delete all --all
 ### Create Pod from manifest
 1. In the manifests directory you will find  `nginx-kube.yml` . This file will launch a simple nginx server. Deploy it with following:
 ```
-kubectl apply -f manifests/nginx-kube.yaml
+kubectl apply -f manifests/nginx-kube.yml
 ```
 
 2. Show the deployed Pods
@@ -144,6 +144,11 @@ curl localhost
 Output: 
 ```
 Hello from the debian container
+```
+
+8. Exit the `nginx` container 
+```
+exit
 ```
 
 ### Deploy MySQLDB and connect to the client
