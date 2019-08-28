@@ -18,7 +18,7 @@ Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)
 ### Day 2 - Kubernetes
 Lab 1: [Get familiar with Kubectl](labs/commands/)    
 Lab 2: [Pods](labs/pods/)  
-Lab 3: [Deployments](labs/multi-tier/)  
+Lab 3: [Deployments](labs/deployments/)  
 Lab 4: [Advanced Scheduling](labs/scheduling/)  
 Lab 5: [ConfigMap](labs/configmap/)  
 Lab 6: [Secrets](labs/secrets/)  
