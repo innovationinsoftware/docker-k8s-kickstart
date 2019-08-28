@@ -16,15 +16,15 @@ Lab 2: [Networking](labs/networking/)
 Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)
 
 ### Day 2 - Kubernetes
-Lab 1: [Get familiar with Kubectl](labs/commands/)   
-Lab 2: [Pods](labs/pods/)
-Lab 3: [Deployments](labs/multi-tier/)
-Lab 4: [Advanced Scheduling](labs/scheduling/)
-Lab 5: [ConfigMap](labs/configmap/)
-Lab 6: [Secrets](labs/secrets/)
-Lab 7: [Liveness & Readiness checks](labs/health-checks/)
-Lab 8: [Role Based Access Controls](labs/rbac/)
-Lab 9: [Helm](labs/helm/)
+Lab 1: [Get familiar with Kubectl](labs/commands/)    
+Lab 2: [Pods](labs/pods/)  
+Lab 3: [Deployments](labs/multi-tier/)  
+Lab 4: [Advanced Scheduling](labs/scheduling/)  
+Lab 5: [ConfigMap](labs/configmap/)  
+Lab 6: [Secrets](labs/secrets/)  
+Lab 7: [Liveness & Readiness checks](labs/health-checks/)  
+Lab 8: [Role Based Access Controls](labs/rbac/)  
+Lab 9: [Helm](labs/helm/)  
 
-Please let me know what you liked about the class and if you feel anything can be improved! 
+Please let me know what you liked about the class and if you feel anything can be improved!   
 [Feedback Survey](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00444884)
