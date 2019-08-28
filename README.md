@@ -14,3 +14,7 @@ Lab 1: [Images](labs/images/)
 Lab 2: [Networking](labs/networking/)  
 Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)
 
+### Day 2 - Kubernetes
+Lab 1: [Get familiar with Kubectl](labs/01_commands)   
+Lab 2: [Pods](labs/02_pods)
+
