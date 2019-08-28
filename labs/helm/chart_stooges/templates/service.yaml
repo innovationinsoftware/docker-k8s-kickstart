@@ -1,0 +1,42 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: moe
+spec:
+  selector:
+    app: moe
+  ports:
+    - name: main
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: larry
+spec:
+  selector:
+    app: larry
+  ports:
+    - name: main
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: curly
+spec:
+  selector:
+    app: curly
+  ports:
+    - name: main
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
