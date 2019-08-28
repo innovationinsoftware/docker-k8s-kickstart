@@ -1,4 +1,3 @@
-# Advanced Kubernetes Lab 02
 # Advanced Scheduling
 ## Node Affinity/Anti-Affinity 
 
