@@ -80,7 +80,7 @@ Look in the `config` directory and you will see `reverseproxy.conf` which contai
 	* port: `80`
 	* protocol: `TCP`
 	* Selector: `app: helloworld-nginx`
-	* type: `NodePort`
+	* type: `LoadBalancer`
 	
 ### Validate
 Now run `curl` to connect to server on port 80 and confirm you get 
