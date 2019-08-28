@@ -1,11 +1,6 @@
 # Advanced Scheduling
 ## Node Affinity/Anti-Affinity 
 
-## Log into Kubernetes Master Server
-```
-ssh ubuntu@<IP of k8s master>
-```
-
 Get list of nodes
 ```
 kubectl get nodes 
