@@ -43,7 +43,7 @@ Output should be similar to:
 mariadb-4.4.2.tgz
 ```
 
-** Step 2:** Now that we have downloaded the dependent chart, create a new release.
+**Step 2:** Now that we have downloaded the dependant chart, create a new release.
 
 `helm install --name counter charts/counter`
 
@@ -98,7 +98,7 @@ kubectl get pods
 You should see pods being terminated and created
 **NOTE: This may take a little while to occur**
 
-**Step 7:** Confirm updated application is available 
+**Step 7:** Confirm updated application is available    
 Either load in a browser 'External-IP' or use `curl` to hit the ELB
 
 **Step 8:** Delete a release
