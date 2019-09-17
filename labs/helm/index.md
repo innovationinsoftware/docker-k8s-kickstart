@@ -20,73 +20,90 @@ kubectl create clusterrolebinding tiller-admin-binding --clusterrole=cluster-adm
 
 Initialize Helm to install tiller in your cluster 
 ```
-helm init --service-account=tiller
+helm init --service-account=tiller --upgrade
 helm repo update
 ```
 
-## The Helm Chart File System
+## Chart Operations for a demo Chart
 
-The Helm chart's file system. Helm relies upon the existence file, `Chart.yaml` and
-a `templates` directory the contains the files:
-
-* `deployment.yaml`
-* `service.yaml`
-* `ingress.yaml`
-
-
-
-```bash
-chart_01
-├── Chart.yaml
-└── templates
-    ├── deployment.yaml
-    ├── ingress.yaml
-    └── service.yaml
+**Step 1:** Download dependent charts
 
 ```
+helm dependency update counter
+```
 
-## Chart Operations for a Simple Chart
+You will now see that `charts` has a new file 
 
-**Step 1:** Execute a release
+```
+ls charts/counter/charts 
+```
 
-`helm install chart_01 --name=simplechart`
+Output should be similar to:  
+```
+mariadb-4.4.2.tgz
+```
 
-**Step 2:** List the release
+** Step 2:** Now that we have downloaded the dependent chart, create a new release.
 
-`helm list`
+`helm install --name counter charts/counter`
 
-**Step 3:** Try the release out. Find the IP address of the service
+**Step 3:** List the release
+
+`helm ls`
+
+**Step 4:** Try the release out. Find the IP address of the service
 
 `kubectl get svc`
 
+**NOTE: The application can take a few minutes to come online, if it doesn't load wait 5 minutes and try again**
+
 Load the 'External-IP' in a browser
 
-**Step 4:** Delete a release
-
-`helm delete simplechart --purge`
-
-
-
-## Chart Operations for a Chart Using Value Variables
-
-The Helm chart's file system for Stooges
-
-```bash
-chart_stooges/
-├── Chart.yaml
-├── templates
-│   ├── deployment.yaml
-│   ├── ingress.yaml
-│   └── service.yaml
-└── values.yaml
+You can also test with curl
+```
+curl <External-IP>
 ```
 
-Contents of the file, `values.yaml`
+**Step 5:** Upgrade application
 
-```yaml
-replicas: 2
-color: blue
-author: me
+Let's upgrade our application by deploying a new release.
+**NOTE: There is a bug with mariadb chart when using randomly generated passwords. To overcome this
+we need to get the current password and save it as a variable to use when upgrading our release. 
+
+Get password
 ```
-Instructor will show demo of Chart install with variables. 
+kubectl get secret counter-mariadb -o yaml
+```
+
+In the `yaml` output you will see two encoded passwords, `mariadb-root` and `mariadb-password`, we need the mariadb-password. 
+Decode the hashed password
+```
+echo '<mariadb-password>' | base64 --decode
+```
+
+Create a variable from the output
+```
+export DB_PASSWORD=<password from above> 
+```
+
+Now we can upgrade the release
+```
+helm upgrade --set image.tag=v0.0.2,mariadb.db.password=$DB_PASSWORD counter charts/counter
+```
+
+**Step 6:** Confirm application is being upgraded
+```
+kubectl get pods 
+```
+You should see pods being terminated and created
+**NOTE: This may take a little while to occur**
+
+**Step 7:** Confirm updated application is available 
+Either load in a browser 'External-IP' or use `curl` to hit the ELB
+
+**Step 8:** Delete a release
+
+`helm delete counter --purge`
+
+## Congrats!
 
