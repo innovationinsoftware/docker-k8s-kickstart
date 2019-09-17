@@ -4,7 +4,7 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 
 ## Course Content 
 [Slides Day 1](http://bit.ly/docker-k8s-content-1)   
-[//]: # [Slides Day 2](http://bit.ly/docker-k8s-content-2)   
+[//]: # #[Slides Day 2](http://bit.ly/docker-k8s-content-2)   
 
 ## Labs
 [lab VMs](https://docs.google.com/spreadsheets/d/1kW1rNQMZVdoYa2IDLZa66rLv122LM_mIfkbjxhEmVsQ/edit?usp=sharing)  
@@ -12,8 +12,8 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 
 ### Day 1 - Docker
 Lab 1: [Images](labs/images/)  
-Optional: Lab 2: [Networking](labs/networking/)  
-Optional: Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)
+Lab 2: [Networking](labs/networking/)  (Optional)
+Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)  (Optional)
 
 ### Day 1 - Kubernetes
 Lab 1: [Get familiar with Kubectl](labs/commands/)    
@@ -29,4 +29,4 @@ Lab 3: [Deployments](labs/deployments/)
 [//]: # Lab 9: [Helm](labs/helm/)  
 
 Please let me know what you liked about the class and if you feel anything can be improved!   
-[//]: # [Feedback Survey](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00444884)
+[//]: # #[Feedback Survey](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00444884)
