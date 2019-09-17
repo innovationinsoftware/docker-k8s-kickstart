@@ -4,7 +4,6 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 
 ## Course Content 
 [Slides Day 1](http://bit.ly/docker-k8s-content-1)   
-[//]: # Slides: [Slides Day 2](http://bit.ly/docker-k8s-content-2)   
 
 ## Labs
 [lab VMs](https://docs.google.com/spreadsheets/d/1kW1rNQMZVdoYa2IDLZa66rLv122LM_mIfkbjxhEmVsQ/edit?usp=sharing)  
@@ -29,4 +28,3 @@ Lab 3: [Deployments](labs/deployments/)
 [//]: # Lab 9: [Helm](labs/helm/)  
 
 Please let me know what you liked about the class and if you feel anything can be improved!   
-[//]: # Feedback [Feedback Survey](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00444884)
