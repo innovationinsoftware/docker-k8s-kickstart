@@ -66,7 +66,7 @@ curl <External-IP>
 
 **Step 5:** Upgrade application
 
-Let's upgrade our application by deploying a new release.
+Let's upgrade our application by deploying a new release.   
 **NOTE: There is a bug with mariadb chart when using randomly generated passwords. To overcome this
 we need to get the current password and save it as a variable to use when upgrading our release. 
 
@@ -101,7 +101,7 @@ You should see pods being terminated and created
 **Step 7:** Confirm updated application is available    
 Either load in a browser 'External-IP' or use `curl` to hit the ELB
 
-**Step 8:** Rollback a release
+**Step 8:** Rollback a release   
 Sometimes an update does not go as planned, in these situations you can rollback to an earlier revision.  
 First run `helm history counter` to see the available revisions.     
 You should see there are two revisions, let's rollback to revision 1. 
@@ -113,7 +113,7 @@ Now you will see the pods go into a `Terminating` and `ContainerCreating` status
 
 After a few minutes you should be able to run the `curl` command and see it is now displaying version 1.
 
-**Step 9:** Delete a release, but not the history
+**Step 9:** Delete a release, but not the history   
 
 `helm delete counter`
 
@@ -122,21 +122,21 @@ Now if you run `helm history counter` you will see it still exists. If you want 
 helm delete counter --purge
 ```
 
-## Override Helm chart values at deployment 
+## Override Helm chart values at deployment    
 Helm allows values to bet set at deployment time which makes charts more portable and customizable.   
 In this lab you are going to deploy a simple `todo` app and use Helm to override some default vaules. 
 
-**Step 1:** Let's start by adding a new repository which has a chart for our simple todo app.  
+**Step 1:** Let's start by adding a new repository which has a chart for our simple todo app.    
 ```
 helm repo add bitnami https://charts.bitnami.com
 ```
 
-**Step 2:** Now run `update` to index the charts in that repository 
+**Step 2:** Now run `update` to index the charts in that repository   
 ```
 helm repo update 
 ```
 
-**Step 3:** After this we can install our app. 
+**Step 3:** After this we can install our app.   
 ```
 helm install bitnami/mean --name todo
 ```
@@ -149,17 +149,17 @@ In the output you will see:
   echo "MEAN app URL: http://127.0.0.1:80/"
 ```
 
-**Step 4:** Access application over ClusterIP
+**Step 4:** Access application over `ClusterIP`   
 Now that you've deployed the app you can run `kubectl port-forward` from above output to create a tunnel from your local machine
 to the cluster. This allows you to load the application on your local machine for testing without making it public available.
 
-**Step 5:** Override `serviceType` to expose application publicly. 
+**Step 5:** Override `serviceType` to expose application publicly.   
 Let's upgrade our application so that it is available externally. 
 ```
 helm install bitnami/mean --name todo --set service.type=LoadBalancer
 ```
 
-**Step 6:** Confirm application is accessible. 
+**Step 6:** Confirm application is accessible.   
 Run the ouput from the following command to get the URL the application is running on and load in your browser. 
 
 **Step 7:** Deploy a new release 
@@ -172,7 +172,6 @@ helm upgrade mean --set service.type=LoadBalancer,image.tag=8.16.1-r33
 ```
 helm history todo 
 ``` 
-
 
 ## Congrats!
 
