@@ -151,7 +151,7 @@ In the output you will see:
 
 **Step 4:** Access application over `ClusterIP`   
 Now that you've deployed the app you can run `kubectl port-forward` from above output to create a tunnel from your local machine
-to the cluster. This allows you to load the application on your local machine for testing without making it public available.
+to the cluster. This allows you to load the application on your local machine for testing without making it publicly available.
 
 **Step 5:** Override `serviceType` to expose application publicly.   
 Let's upgrade our application so that it is available externally. 
