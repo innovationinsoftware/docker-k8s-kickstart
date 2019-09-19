@@ -156,7 +156,7 @@ to the cluster. This allows you to load the application on your local machine fo
 **Step 5:** Override `serviceType` to expose application publicly.   
 Let's upgrade our application so that it is available externally. 
 ```
-helm install bitnami/mean --name todo --set service.type=LoadBalancer
+helm upgrade todo --set service.type=LoadBalancer
 ```
 
 **Step 6:** Confirm application is accessible.   
