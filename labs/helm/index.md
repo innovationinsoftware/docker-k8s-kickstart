@@ -67,7 +67,7 @@ curl <External-IP>
 **Step 5:** Upgrade application
 
 Let's upgrade our application by deploying a new release.   
-**NOTE: There is a bug with mariadb chart when using randomly generated passwords. To overcome this
+**NOTE:** There is a bug with mariadb chart when using randomly generated passwords. To overcome this
 we need to get the current password and save it as a variable to use when upgrading our release. 
 
 Get password
