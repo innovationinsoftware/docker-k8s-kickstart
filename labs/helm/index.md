@@ -160,7 +160,7 @@ helm upgrade todo --set service.type=LoadBalancer
 ```
 
 **Step 6:** Confirm application is accessible.   
-Run the ouput from the following command to get the URL the application is running on and load in your browser. 
+Run the ouput from the `upgrade` command to get the URL the application is running on and load in your browser. 
 
 **Step 7:** Deploy a new release 
 Now the app is available publicly let's deploy an updated release.   
@@ -229,6 +229,10 @@ This is a basic Service definition using templating. When deploying the chart, H
 1. Do a `dry-run` of `helm install` and enable debugging   
 ```
 helm install --dry-run --debug ./mychart
+```
+
+You should see something like this:   
+```
 ...
 # Source: mychart/templates/service.yaml
 apiVersion: v1
@@ -254,7 +258,7 @@ spec:
 ...
 ```
 
-2. Newer versions of Helm support running `helm template` which will take the template files and convert them to working definition files. 
+2. Newer versions of Helm support running `helm template` which will take the template files and convert them to working definition files.   
 ```
 helm template mychart -x templates/service.yaml
 ```
