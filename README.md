@@ -12,7 +12,7 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 
 ### Day 1 - Docker
 Lab 1: [Images](labs/images/)  
-Lab 2: [Optimizing Dockerfiles](labs/adv-dockerfile/)
+Lab 2: [Optimizing Dockerfiles](labs/adv-dockerfile/)   
 Lab 3: [Networking](labs/networking/)   
 
 ### Day 1 - Kubernetes
