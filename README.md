@@ -7,7 +7,7 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 [Slides Day 2](http://bit.ly/docker-k8s-content-2)   
 
 ## Labs
-[lab VMs](https://docs.google.com/spreadsheets/d/1kW1rNQMZVdoYa2IDLZa66rLv122LM_mIfkbjxhEmVsQ/edit?usp=sharing)  
+[lab VMs](https://docs.google.com/spreadsheets/d/1hqMfSpDqjohHlOX_bwkYhIvntLVW6E8ktLa3uQLHL7k/edit?usp=sharing)  
 [Lab Setup](labs/001_setup/)  
 
 ### Day 1 - Docker
