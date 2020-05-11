@@ -12,8 +12,6 @@ This site includes the slides and labs for the Docker Kubernetes Kickstart class
 
 ### Day 1 - Docker
 Lab 1: [Images](labs/images/)  
-
-**OPTIONAL**   
 Lab 2: [Networking](labs/networking/)   
 Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)
 
@@ -28,7 +26,4 @@ Lab 5: [ConfigMap](labs/configmap/)
 Lab 6: [Secrets](labs/secrets/)  
 Lab 7: [Liveness & Readiness checks](labs/health-checks/)  
 Lab 8: [Role Based Access Controls](labs/rbac/)  
-Lab 9: [Helm](labs/helm/)  
 
-Please let me know what you liked about the class and if you feel anything can be improved!   
-[Feedback survey](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00444885)
