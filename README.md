@@ -16,6 +16,7 @@ Lab 2: [Networking](labs/networking/)
 Lab 3: [Optimizing Dockerfiles](labs/adv-dockerfile/)  
 
 ### Day 1 - Kubernetes
+[Setup Kubernetes Cluster](https://gist.github.com/jruels/5d2ae0b0251c9deabd9d2cf0a148d0e5)
 Lab 1: [Get familiar with Kubectl](labs/commands/)    
 Lab 2: [Pods](labs/pods/)    
 Lab 3: [Deployments](labs/deployments/)     
