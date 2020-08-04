@@ -43,10 +43,10 @@ You can switch to Insert Text mode with the 'i' command. Edit the file contents 
 5.	To exit and save the Dockerfile, hit the esc button and enter  
     `:wq`
 
-6.	Build a new container using the Dockerfile:  
+6.	Build a new image using the Dockerfile:  
     `docker build -t wordpress-cli:aio-dockerfile .`  
 *NOTE: you must add the period at the end*  
-The output will list each step from the Dockerfile as it completes and give a container ID when the build is successful.
+The output will list each step from the Dockerfile as it completes and give an image ID when the build is successful.
     ```
     Sending build context to Docker daemon 2.048 kB
     Step 1 : FROM lindison/wordpress-aio
