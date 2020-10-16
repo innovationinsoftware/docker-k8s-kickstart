@@ -24,7 +24,7 @@ Lab 3: [Deployments](labs/deployments/)
 Lab 4: [Advanced Scheduling](labs/scheduling/)  
 Lab 5: [ConfigMap](labs/configmap/)  
 Lab 6: [Secrets](labs/secrets/)  
-Lab 7: [Helm](http://bit.ly/helm-guide)  
+Lab 7: [Helm](https://gist.github.com/jruels/4e260495a42a0bc8aea71468d18569f3)  
 Lab 8: [Liveness & Readiness checks](labs/health-checks/)  
 Lab 9: [Role Based Access Controls](labs/rbac/)  
 
