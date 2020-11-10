@@ -139,11 +139,11 @@ kubectl get services
 
 You should see something like this 
 ```
-NAME           TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
-frontend       NodePort    10.107.73.47   <none>        80:31495/TCP   34s
-kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP        44m
-redis-master   ClusterIP   10.107.62.78   <none>        6379/TCP       11m
-redis-slave    ClusterIP   10.98.54.128   <none>        6379/TCP       6m
+NAME           TYPE          CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+frontend       LoadBalancer  10.107.73.47   35.215.21.10  80:31495/TCP   34s
+kubernetes     ClusterIP     10.96.0.1      <none>        443/TCP        44m
+redis-master   ClusterIP     10.107.62.78   <none>        6379/TCP       11m
+redis-slave    ClusterIP     10.98.54.128   <none>        6379/TCP       6m
 ```
 
 ### Viewing the Frontend Service 
